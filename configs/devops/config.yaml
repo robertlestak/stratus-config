@@ -1,0 +1,15 @@
+- source:
+    id: "stratus-example@sandbox.iam.gserviceaccount.com"
+    provider: "gcp"
+    region: "us-central1"
+  target:
+    id: "arn:aws:iam::xxxxxx:role/stratus-example"
+    provider: "aws"
+    region: us-east-1
+- source:
+    id: "system:serviceaccount:example-dev:example-sa"
+    provider: "k8s"
+  target:
+    id: "stratus-example@sandbox.iam.gserviceaccount.com"
+    provider: "gcp"
+    region: "us-central1"
